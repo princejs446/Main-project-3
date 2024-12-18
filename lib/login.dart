@@ -80,7 +80,7 @@ class _LoginPageState extends State<LoginPage> {
               height:40,
               width:300,
               child: ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.orange[600],foregroundColor: Colors.white),
+                style: ElevatedButton.styleFrom(backgroundColor: const Color.fromARGB(255, 117, 199, 253),foregroundColor: Colors.white),
 
                 onPressed:()
                 {
