@@ -101,7 +101,6 @@ class _QuizScreenState extends State<QuizScreen> {
       _currentQuestionIndex++;
     });
 
-    // Check if it's the last question to show the result screen
     if (_currentQuestionIndex == _questions.length) {
       Navigator.pushReplacement(
         context,
