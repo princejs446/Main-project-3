@@ -6,6 +6,41 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        title: Text('Home'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.logout),
+            onPressed: () {
+              // Add your logout logic here
+              showDialog(
+                context: context,
+                builder: (context) => AlertDialog(
+                  title: Text("Logout"),
+                  content: Text("Are you sure you want to log out?"),
+                  actions: [
+                    TextButton(
+                      onPressed: () {
+                        Navigator.pop(context); // Close dialog
+                      },
+                      child: Text("Cancel"),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        // Add actual logout handling logic here
+                        Navigator.pop(context); // Close dialog
+                        Navigator.pop(context); // Navigate to previous screen or login screen
+                      },
+                      child: Text("Logout"),
+                    ),
+                  ],
+                ),
+              );
+            },
+          ),
+        ],
+      ),
       body: Center(
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(

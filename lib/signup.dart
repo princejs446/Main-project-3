@@ -48,6 +48,7 @@ class _SignupState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text('Sign up',style: TextStyle(fontSize:25,fontWeight: FontWeight.bold )),backgroundColor: Colors.lightBlue,),
       body: Column(
         children: [
           Container(
