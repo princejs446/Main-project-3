@@ -9,8 +9,8 @@ class QuizScreen extends StatefulWidget {
 class _QuizScreenState extends State<QuizScreen> {
   int _currentQuestionIndex = 0;
   int _score = 0;
-  int? _selectedOption; // Stores selected option for the current question
-  bool _answered = false; // To track if an option is answered
+  int? _selectedOption; 
+  bool _answered = false; 
 
   final List<Map<String, dynamic>> _questions = [
     {
@@ -80,24 +80,23 @@ class _QuizScreenState extends State<QuizScreen> {
     },
   ];
 
-  // Handles when an option is selected
   void _selectOption(int selectedOption) {
     setState(() {
       _selectedOption = selectedOption;
-      _answered = true; // Mark the question as answered
+      _answered = true;
     });
 
-    // Check if the answer is correct
+
     if (_selectedOption == _questions[_currentQuestionIndex]['answer']) {
       _score++;
     }
   }
 
-  // Handles the next button or finish button logic
+  
   void _nextQuestion() {
     setState(() {
-      _answered = false; // Reset for next question
-      _selectedOption = null; // Reset selected option for next question
+      _answered = false; 
+      _selectedOption = null; 
       _currentQuestionIndex++;
     });
 
@@ -125,14 +124,14 @@ class _QuizScreenState extends State<QuizScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // Display the question
+            
             Text(
               _questions[_currentQuestionIndex]['question'],
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 20),
 
-            // Display options with symbols based on selection
+     
             ..._questions[_currentQuestionIndex]['options']
                 .asMap()
                 .entries
@@ -141,7 +140,6 @@ class _QuizScreenState extends State<QuizScreen> {
                     int index = entry.key;
                     String option = entry.value;
 
-                    // Check if this option is the correct one or the selected one
                     bool isCorrect = index == _questions[_currentQuestionIndex]['answer'];
                     bool isSelected = index == _selectedOption;
 
@@ -151,25 +149,25 @@ class _QuizScreenState extends State<QuizScreen> {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: isSelected
                               ? (isCorrect ? Colors.green : const Color.fromARGB(255, 97, 179, 226))
-                              : const Color.fromARGB(255, 231, 224, 225), // Light red for unselected options
+                              : const Color.fromARGB(255, 231, 224, 225),
                           foregroundColor: Colors.white,
                           padding: EdgeInsets.symmetric(vertical: 16),
                         ),
                         onPressed: _answered
                             ? null
-                            : () => _selectOption(index), // Disable after answering
+                            : () => _selectOption(index),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             if (isSelected)
                               Icon(
                                 isCorrect ? Icons.check : Icons.close,
-                                color: isCorrect ? Colors.green : const Color.fromARGB(255, 228, 27, 13), // Green for correct, Red for incorrect
+                                color: isCorrect ? Colors.green : const Color.fromARGB(255, 228, 27, 13), 
                               ),
                             SizedBox(width: 10),
                             Text(
                               option,
-                              style: TextStyle(color: Colors.black), // Set text color to black
+                              style: TextStyle(color: Colors.black), 
                             ),
                           ],
                         ),
@@ -179,22 +177,21 @@ class _QuizScreenState extends State<QuizScreen> {
                 )
                 .toList(),
 
-            // This Spacer widget will push the next button to the bottom of the screen
             Spacer(),
 
-            // Display Next or Finish button
+  
             Align(
               alignment: Alignment.bottomCenter,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(0, 148, 85, 85), // No background color
-                  padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16), // Small button size
-                  side: BorderSide(color: Colors.black), // Optional border for visibility
+                  backgroundColor: const Color.fromARGB(0, 148, 85, 85), 
+                  padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16), 
+                  side: BorderSide(color: Colors.black), 
                 ),
                 onPressed: _selectedOption == null ? null : _nextQuestion,
                 child: Text(
                   isLastQuestion ? 'Finish' : 'Next',
-                  style: TextStyle(color: Colors.black), // Optional text color
+                  style: TextStyle(color: Colors.black), 
                 ),
               ),
             ),

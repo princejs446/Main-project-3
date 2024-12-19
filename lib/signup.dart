@@ -1,5 +1,5 @@
-
 import 'package:firebase_auth/firebase_auth.dart';
+
 import 'package:flutter/material.dart';
 import 'package:mainproject_3/forgot_pass.dart';
 import 'package:mainproject_3/login.dart';
@@ -48,13 +48,12 @@ class _SignupState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Sign up',style: TextStyle(fontSize:25,fontWeight: FontWeight.bold )),backgroundColor: Colors.lightBlue,),
       body: Column(
         children: [
           Container(
             height:400,
             decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage("assets/images/signup.jpeg"),fit: BoxFit.cover)
+              image: DecorationImage(image: AssetImage("assets/images/signup.jpg"),fit: BoxFit.cover)
             ),
           ),
            SizedBox(height:20),
@@ -82,7 +81,7 @@ class _SignupState extends State<Signup> {
               height:40,
               width:300,
               child: ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: const Color.fromARGB(255, 119, 182, 224),foregroundColor: Colors.white),
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.orange[600],foregroundColor: Colors.white),
 
                 onPressed: (){
                   _signUp();
@@ -108,7 +107,7 @@ class _SignupState extends State<Signup> {
 );
 
                 } ,
-                child: Text("Login",style: TextStyle(color:const Color.fromARGB(255, 75, 212, 253),fontSize: 18),))
+                child: Text("Login",style: TextStyle(color:Colors.orange,fontSize: 18),))
             ],),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

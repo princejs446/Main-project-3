@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.logout),
             onPressed: () {
-              // Add your logout logic here
+            
               showDialog(
                 context: context,
                 builder: (context) => AlertDialog(
@@ -22,15 +22,15 @@ class HomeScreen extends StatelessWidget {
                   actions: [
                     TextButton(
                       onPressed: () {
-                        Navigator.pop(context); // Close dialog
+                        Navigator.pop(context); 
                       },
                       child: Text("Cancel"),
                     ),
                     TextButton(
                       onPressed: () {
-                        // Add actual logout handling logic here
-                        Navigator.pop(context); // Close dialog
-                        Navigator.pop(context); // Navigate to previous screen or login screen
+            
+                        Navigator.pop(context); 
+                        Navigator.pop(context); 
                       },
                       child: Text("Logout"),
                     ),
