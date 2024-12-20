@@ -47,12 +47,12 @@ class _SignupState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       appBar: AppBar(title: Text('Sign Up',style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),backgroundColor: Colors.lightBlue,),
       body: Column(
         children: [
           Container(
             height:400,
             decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage("assets/images/signup.jpg"),fit: BoxFit.cover)
             ),
           ),
            SizedBox(height:20),
@@ -80,7 +80,7 @@ class _SignupState extends State<Signup> {
               height:40,
               width:300,
               child: ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: const Color.fromARGB(255, 153, 234, 245),foregroundColor: Colors.white),
+                style: ElevatedButton.styleFrom(backgroundColor: const Color.fromARGB(255, 120, 185, 238),foregroundColor: Colors.white),
 
                 onPressed: (){
                   _signUp();
