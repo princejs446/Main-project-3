@@ -11,7 +11,7 @@ class AuthWrapper extends StatelessWidget {
       stream: FirebaseAuth.instance.authStateChanges(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.active) {
-          // User is logged in
+          
           if (snapshot.hasData) {
             return HomeScreen();  
           }
