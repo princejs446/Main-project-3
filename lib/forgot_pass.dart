@@ -11,7 +11,6 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
   bool _isLoading = false;
   String? _errorMessage;
 
-  // Function to send the password reset email
   Future<void> _sendPasswordResetEmail() async {
     setState(() {
       _isLoading = true;
@@ -25,18 +24,18 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
       setState(() {
         _isLoading = false;
       });
-      // Show success message
+      
       _showDialog('Password reset email sent! Please check your inbox.');
     } on FirebaseAuthException catch (e) {
       setState(() {
         _isLoading = false;
       });
-      // Handle different Firebase errors
+      
       _showDialog(e.message ?? 'An error occurred');
     }
   }
 
-  // Function to show a simple dialog with a message
+
   void _showDialog(String message) {
     showDialog(
       context: context,

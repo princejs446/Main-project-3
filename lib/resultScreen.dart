@@ -24,24 +24,24 @@ class ResultScreen extends StatelessWidget {
             ),
             SizedBox(height: 20),
 
-            // CircularProgressIndicator with percentage
+           
             Stack(
               alignment: Alignment.center,
               children: [
-                // Make the circular progress indicator bigger
+        
                 SizedBox(
-                  width: 200,  // Adjust the width to make the indicator larger
-                  height: 200, // Adjust the height to make the indicator larger
+                  width: 200, 
+                  height: 200,
                   child: CircularProgressIndicator(
-                    value: percentage / 100, // Set the value to the percentage
-                    strokeWidth: 20, // Increased the stroke width to make it more prominent
+                    value: percentage / 100, 
+                    strokeWidth: 20, 
                     valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
                   ),
                 ),
                 Text(
-                  '${percentage.toStringAsFixed(1)}%', // Display the percentage with one decimal place
+                  '${percentage.toStringAsFixed(1)}%', 
                   style: TextStyle(
-                    fontSize: 50, // Font size for the percentage text
+                    fontSize: 50, 
                     color: Colors.blue,
                     fontWeight: FontWeight.bold,
                   ),
@@ -50,7 +50,7 @@ class ResultScreen extends StatelessWidget {
             ),
             SizedBox(height: 20),
 
-            // Display the score
+       
             Text(
               'Score: $score / $total',
               style: TextStyle(fontSize: 24, color: Colors.black, fontWeight: FontWeight.bold),

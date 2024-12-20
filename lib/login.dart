@@ -1,6 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-
-
 import 'package:flutter/material.dart';
 import 'package:mainproject_3/Homescreen.dart';
 import 'package:mainproject_3/forgot_pass.dart';
@@ -81,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
               height:40,
               width:300,
               child: ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.orange[600],foregroundColor: Colors.white),
+                style: ElevatedButton.styleFrom(backgroundColor: const Color.fromARGB(255, 84, 204, 252),foregroundColor: Colors.white),
 
                 onPressed:()
                 {

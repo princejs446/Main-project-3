@@ -1,5 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-
 import 'package:flutter/material.dart';
 import 'package:mainproject_3/forgot_pass.dart';
 import 'package:mainproject_3/login.dart';
@@ -81,7 +80,7 @@ class _SignupState extends State<Signup> {
               height:40,
               width:300,
               child: ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.orange[600],foregroundColor: Colors.white),
+                style: ElevatedButton.styleFrom(backgroundColor: const Color.fromARGB(255, 153, 234, 245),foregroundColor: Colors.white),
 
                 onPressed: (){
                   _signUp();
@@ -107,7 +106,7 @@ class _SignupState extends State<Signup> {
 );
 
                 } ,
-                child: Text("Login",style: TextStyle(color:Colors.orange,fontSize: 18),))
+                child: Text("Login",style: TextStyle(color:const Color.fromARGB(255, 136, 198, 248),fontSize: 18),))
             ],),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
