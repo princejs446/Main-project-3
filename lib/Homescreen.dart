@@ -13,7 +13,6 @@ class HomeScreen extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.logout),
             onPressed: () {
-            
               showDialog(
                 context: context,
                 builder: (context) => AlertDialog(
@@ -28,7 +27,6 @@ class HomeScreen extends StatelessWidget {
                     ),
                     TextButton(
                       onPressed: () {
-            
                         Navigator.pop(context); 
                         Navigator.pop(context); 
                       },
@@ -41,22 +39,31 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Center(
-        child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            shape: CircleBorder(),
-            padding: EdgeInsets.all(50),
-            backgroundColor: Colors.blue,
+      body: Container(
+        // Adding the background image here
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/log.jpeg'), // Use the correct path of your image here
+            fit: BoxFit.cover, // Ensures the image covers the entire screen
           ),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => QuizScreen()),
-            );
-          },
-          child: Text(
-            "Start",
-            style: TextStyle(fontSize: 24, color: Colors.white),
+        ),
+        child: Center(
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              shape: CircleBorder(),
+              padding: EdgeInsets.all(50),
+              backgroundColor: Colors.blue,
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => QuizScreen()),
+              );
+            },
+            child: Text(
+              "Start",
+              style: TextStyle(fontSize: 24, color: Colors.white),
+            ),
           ),
         ),
       ),

@@ -54,36 +54,50 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
     );
   }
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Forgot Password"),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            TextField(
-              controller: _emailController,
-              keyboardType: TextInputType.emailAddress,
-              decoration: InputDecoration(
-                labelText: 'Enter your email',
-                hintText: 'example@example.com',
-                errorText: _errorMessage,
-              ),
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: Text("Forgot Password"),
+    ),
+    body: Stack(
+      children: [
+        // Background Image
+        Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/log.jpeg'), // Your image asset
+              fit: BoxFit.cover,
             ),
-            SizedBox(height: 20),
-            _isLoading
-                ? CircularProgressIndicator()
-                : ElevatedButton(
-                    onPressed: _sendPasswordResetEmail,
-                    child: Text('Reset Password'),
-                  ),
-          ],
+          ),
         ),
-      ),
-    );
-  }
+        // Main Content
+        Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              TextField(
+                controller: _emailController,
+                keyboardType: TextInputType.emailAddress,
+                decoration: InputDecoration(
+                  labelText: 'Enter your email',
+                  hintText: 'example@example.com',
+                  errorText: _errorMessage,
+                ),
+              ),
+              SizedBox(height: 20),
+              _isLoading
+                  ? CircularProgressIndicator()
+                  : ElevatedButton(
+                      onPressed: _sendPasswordResetEmail,
+                      child: Text('Reset Password'),
+                    ),
+            ],
+          ),
+        ),
+      ],
+    ),
+  );
+}
 }
