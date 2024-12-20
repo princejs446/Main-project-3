@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:mainproject_3/Homescreen.dart';
 import 'package:mainproject_3/forgot_pass.dart';
-import 'package:mainproject_3/signup.dart';  // Assuming you have a SignUpPage
+import 'package:mainproject_3/signup.dart';  
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -53,12 +53,7 @@ class _LoginPageState extends State<LoginPage> {
       body: Column(
         children: [
           Container(
-            height: 400,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage("assets/images/signup.jpg"),
-                  fit: BoxFit.cover),
-            ),
+            height: 300,
           ),
           SizedBox(height: 20),
           SizedBox(

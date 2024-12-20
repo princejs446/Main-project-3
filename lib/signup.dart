@@ -51,7 +51,7 @@ class _SignupState extends State<Signup> {
       body: Column(
         children: [
           Container(
-            height:400,
+            height:300,
             decoration: BoxDecoration(
             ),
           ),
