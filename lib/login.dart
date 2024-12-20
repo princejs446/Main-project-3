@@ -53,6 +53,12 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Log In',
+          style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+        ),
+      ),
       body: Stack(
         children: [
         
@@ -95,7 +101,7 @@ class _LoginPageState extends State<LoginPage> {
                 width: 300,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 84, 204, 252),
+                    backgroundColor: Colors.lightBlueAccent,
                     foregroundColor: Colors.white,
                   ),
                   onPressed: _signIn,
@@ -115,7 +121,7 @@ class _LoginPageState extends State<LoginPage> {
                     },
                     child: Text(
                       "Forgot password?",
-                      style: TextStyle(fontSize: 18, color: Colors.blue),
+                      style: TextStyle(fontSize: 18, color:Colors.lightBlueAccent),
                     ),
                   ),
                 ],
@@ -138,7 +144,7 @@ class _LoginPageState extends State<LoginPage> {
                     },
                     child: Text(
                       "Sign Up",
-                      style: TextStyle(fontSize: 18, color: Colors.blue),
+                      style: TextStyle(fontSize: 18, color: Colors.lightBlueAccent),
                     ),
                   ),
                 ],

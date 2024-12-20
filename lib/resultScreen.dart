@@ -43,14 +43,14 @@ class ResultScreen extends StatelessWidget {
                     child: CircularProgressIndicator(
                       value: percentage / 100, 
                       strokeWidth: 20, 
-                      valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
+                      valueColor: AlwaysStoppedAnimation<Color>(Colors.lightBlueAccent),
                     ),
                   ),
                   Text(
                     '${percentage.toStringAsFixed(1)}%', 
                     style: TextStyle(
                       fontSize: 50, 
-                      color: Colors.blue,
+                      color: Colors.lightBlueAccent,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -78,7 +78,7 @@ class ResultScreen extends StatelessWidget {
                 },
                 child: Text('Restart'),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue, // Button color
+                  backgroundColor:Colors.lightBlueAccent, // Button color
                   padding: EdgeInsets.symmetric(vertical: 16, horizontal: 40),
                 ),
               ),

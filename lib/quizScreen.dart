@@ -115,7 +115,7 @@ class _QuizScreenState extends State<QuizScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Flutter Quiz'),
-        backgroundColor: const Color.fromARGB(255, 100, 198, 243),
+        backgroundColor: Colors.lightBlueAccent
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -151,7 +151,7 @@ class _QuizScreenState extends State<QuizScreen> {
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             backgroundColor: isSelected
-                                ? (isCorrect ? Colors.green : const Color.fromARGB(255, 97, 179, 226))
+                                ? (isCorrect ? Colors.green : Colors.lightBlueAccent)
                                 : const Color.fromARGB(255, 231, 224, 225),
                             foregroundColor: Colors.white,
                             padding: EdgeInsets.symmetric(vertical: 16),

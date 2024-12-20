@@ -103,7 +103,7 @@ class _SignupState extends State<Signup> {
                 width: 300,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 120, 185, 238),
+                    backgroundColor:Colors.lightBlueAccent,
                     foregroundColor: Colors.white,
                   ),
                   onPressed: () {
@@ -135,7 +135,7 @@ class _SignupState extends State<Signup> {
                     child: Text(
                       "Login",
                       style: TextStyle(
-                        color: const Color.fromARGB(255, 136, 198, 248),
+                        color:Colors.lightBlueAccent,
                         fontSize: 18,
                       ),
                     ),
@@ -154,7 +154,7 @@ class _SignupState extends State<Signup> {
                     },
                     child: Text(
                       "Forgot password?",
-                      style: TextStyle(fontSize: 18, color: Colors.blue),
+                      style: TextStyle(fontSize: 18, color: Colors.lightBlueAccent),
                     ),
                   ),
                 ],
