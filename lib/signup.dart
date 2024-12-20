@@ -60,7 +60,7 @@ class _SignupState extends State<Signup> {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/log.jpeg'), // Path to your background image
-            fit: BoxFit.cover, // This will make the image cover the entire screen
+            fit: BoxFit.cover, 
           ),
         ),
       
