@@ -115,13 +115,13 @@ class _QuizScreenState extends State<QuizScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Flutter Quiz'),
-        backgroundColor: Colors.lightBlueAccent
+        backgroundColor: const Color.fromARGB(255, 149, 194, 231),
       ),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/log.jpeg'), // Use the correct path of your image here
-            fit: BoxFit.cover, // Ensures the image covers the entire screen
+            image: AssetImage('assets/images/log.jpeg'), 
+            fit: BoxFit.cover, 
           ),
         ),
         child: Padding(
@@ -131,7 +131,7 @@ class _QuizScreenState extends State<QuizScreen> {
             children: [
               Text(
                 _questions[_currentQuestionIndex]['question'],
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: const Color.fromARGB(255, 19, 18, 18)),
               ),
               SizedBox(height: 20),
 
@@ -151,7 +151,7 @@ class _QuizScreenState extends State<QuizScreen> {
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             backgroundColor: isSelected
-                                ? (isCorrect ? Colors.green : Colors.lightBlueAccent)
+                                ? (isCorrect ? Colors.green : const Color.fromARGB(255, 149, 194, 231))
                                 : const Color.fromARGB(255, 231, 224, 225),
                             foregroundColor: Colors.white,
                             padding: EdgeInsets.symmetric(vertical: 16),

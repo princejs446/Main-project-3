@@ -21,13 +21,13 @@ class _LoginPageState extends State<LoginPage> {
         email: _emailController.text.trim(),
         password: _passwordController.text.trim(),
       );
-      // If successful, navigate to the home screen
+    
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => HomeScreen()),
       );
     } catch (e) {
-      // Show error dialog if sign-in fails
+      
       _showErrorDialog(e.toString());
     }
   }
@@ -101,7 +101,7 @@ class _LoginPageState extends State<LoginPage> {
                 width: 300,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.lightBlueAccent,
+                    backgroundColor:const Color.fromARGB(255, 149, 194, 231),
                     foregroundColor: Colors.white,
                   ),
                   onPressed: _signIn,
@@ -121,7 +121,7 @@ class _LoginPageState extends State<LoginPage> {
                     },
                     child: Text(
                       "Forgot password?",
-                      style: TextStyle(fontSize: 18, color:Colors.lightBlueAccent),
+                      style: TextStyle(fontSize: 18, color:const Color.fromARGB(255, 17, 17, 17),),
                     ),
                   ),
                 ],
@@ -140,11 +140,11 @@ class _LoginPageState extends State<LoginPage> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => Signup())); // Assuming you have SignUpPage
+                              builder: (context) => Signup()));
                     },
                     child: Text(
                       "Sign Up",
-                      style: TextStyle(fontSize: 18, color: Colors.lightBlueAccent),
+                      style: TextStyle(fontSize: 18, color:const Color.fromARGB(255, 5, 5, 5),),
                     ),
                   ),
                 ],

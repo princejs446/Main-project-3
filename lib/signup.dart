@@ -56,10 +56,10 @@ class _SignupState extends State<Signup> {
       ),
       
       body: Container(
-        // Add the background image here
+        
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/log.jpeg'), // Path to your background image
+            image: AssetImage('assets/images/log.jpeg'), 
             fit: BoxFit.cover, 
           ),
         ),
@@ -77,8 +77,8 @@ class _SignupState extends State<Signup> {
                   decoration: InputDecoration(
                     labelText: 'Email',
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
-                    filled: true, // Ensure the text field has a background color
-                    fillColor: Colors.white.withOpacity(0.7), // Semi-transparent white background
+                    filled: true, 
+                    fillColor: Colors.white.withOpacity(0.7), 
                   ),
                 ),
               ),
@@ -103,7 +103,7 @@ class _SignupState extends State<Signup> {
                 width: 300,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor:Colors.lightBlueAccent,
+                    backgroundColor:const Color.fromARGB(255, 149, 194, 231),
                     foregroundColor: Colors.white,
                   ),
                   onPressed: () {
@@ -135,7 +135,7 @@ class _SignupState extends State<Signup> {
                     child: Text(
                       "Login",
                       style: TextStyle(
-                        color:Colors.lightBlueAccent,
+                        color:const Color.fromARGB(255, 8, 8, 8),
                         fontSize: 18,
                       ),
                     ),
@@ -154,7 +154,7 @@ class _SignupState extends State<Signup> {
                     },
                     child: Text(
                       "Forgot password?",
-                      style: TextStyle(fontSize: 18, color: Colors.lightBlueAccent),
+                      style: TextStyle(fontSize: 18, color: const Color.fromARGB(255, 7, 7, 7),),
                     ),
                   ),
                 ],

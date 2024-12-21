@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:mainproject_3/firebase_options.dart';
+import 'package:mainproject_3/quizScreen.dart';
 import 'package:mainproject_3/signup.dart';
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();

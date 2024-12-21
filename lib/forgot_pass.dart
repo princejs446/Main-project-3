@@ -62,11 +62,11 @@ Widget build(BuildContext context) {
     ),
     body: Stack(
       children: [
-        // Background Image
+      
         Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/images/log.jpeg'), // Your image asset
+              image: AssetImage('assets/images/log.jpeg'), 
               fit: BoxFit.cover,
             ),
           ),
